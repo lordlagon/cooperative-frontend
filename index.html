@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documento teste</title>
+    <script src="../vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id=root >
+        <p>
+            <h1>Cadastre-se</h1>
+            <h2>Cooperativa XZ</h2>
+        </p>
+        <input v-model="email" placeholder="Email" ><br>
+        <input v-model="senha" placeholder="Senha" ><br>
+        <button v-on:click="cadastrar">Cadastrar</button><br>
+        <a href="">Esqueceu a Senha?</a>
+    </div>
+
+    <script>
+        let root = new Vue({
+            el: "#root",
+            data: {
+                nome: "andre",
+                visivel: true
+            },
+            methods: {
+                mostrarEsconder: function () {
+                    this.visivel = !this.visivel
+                    console.log(this.visivel)
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
