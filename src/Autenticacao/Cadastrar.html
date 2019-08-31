@@ -12,14 +12,15 @@
 
 <body>
 
-    <div id=root  >
+  
+    <div id=root >
         <p>
-            <h1>Login</h1>
+            <h1>Cadastre-se</h1>
             <h2>Cooperativa XZ</h2>
         </p>
         <input v-model="email" placeholder="Email" ><br>
         <input v-model="senha" placeholder="Senha" ><br>
-        <button v-on:click="login">Enviar</button><br>
+        <button v-on:click="cadastrar">Cadastrar</button><br>
         <a href="">Esqueceu a Senha?</a>
     </div>
 
@@ -31,7 +32,7 @@
                 senha: ""
             },
             methods: {
-                login: function () {
+                cadastrar: function () {
                     console.log(this.email, this.senha)
                 }
             }

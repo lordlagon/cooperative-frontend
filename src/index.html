@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Documento teste</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="../vue.js"></script>
 
 </head>
 
 <body>
-
-    <div id=root >
+    <div id=root class="container-fluid" >
         <p>
-            <h1>Cadastre-se</h1>
+            <h1>Login</h1>
             <h2>Cooperativa XZ</h2>
         </p>
         <input v-model="email" placeholder="Email" ><br>
         <input v-model="senha" placeholder="Senha" ><br>
-        <button v-on:click="cadastrar">Cadastrar</button><br>
+        <button v-on:click="login">Enviar</button><br>
         <a href="">Esqueceu a Senha?</a>
     </div>
 
@@ -31,7 +31,7 @@
                 senha: ""
             },
             methods: {
-                cadastrar: function () {
+                login: function () {
                     console.log(this.email, this.senha)
                 }
             }
